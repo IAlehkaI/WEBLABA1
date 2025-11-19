@@ -1,26 +1,41 @@
 version: '3.8'
 
 services:
+  app:
+    build: .
+    ports:
+      - "8000:8000"
+    env_file:
+      - .env
+    environment:
+      - DATABASE_URL=postgresql://user:password@db:5432/newsdb
+      - API_KEY=${API_KEY}
+      - POSTGRES_HOST=db
+      - POSTGRES_DB=newsdb
+      - POSTGRES_USER=user
+      - POSTGRES_PASSWORD=password
+    depends_on:
+      - db
+    volumes:
+      - ./data:/app/data
+    command: >
+      sh -c "
+        /app/wait-for-db.sh db &&
+        alembic upgrade head &&
+        python /app/infrastructure/db/init_db.py &&
+        uvicorn main:app --host 0.0.0.0 --port 8000
+      "
+
   db:
     image: postgres:15
     environment:
       POSTGRES_DB: newsdb
-      POSTGRES_USER: postgres
-      POSTGRES_PASSWORD: postgres
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: password
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
     ports:
       - "5432:5432"
-    volumes:
-      - postgres_/var/lib/postgresql/data
-
-  web:
-    build: .
-    ports:
-      - "8000:8000"
-    environment:
-      - DATABASE_URL=postgresql://postgres:postgres@db:5432/newsdb
-    depends_on:
-      - db
-    restart: on-failure
 
 volumes:
-  postgres_
+  postgres_data:

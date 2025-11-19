@@ -4,18 +4,42 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1f7a9c4b-59de-4e79-8320-10e9b5b2e80a" name="Changes" comment="LABA1NewsApp и отчет">
-      <change afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/infrastructure/database.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/infrastructure/models.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/security/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/security/auth.py" afterDir="false" />
+    <list default="true" id="1f7a9c4b-59de-4e79-8320-10e9b5b2e80a" name="Changes" comment="LABA2NewsApp">
+      <change afterPath="$PROJECT_DIR$/.env.example" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/alembic.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/alembic/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/alembic/env.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/alembic/script.py.mako" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/alembic/versions/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/infrastructure/db/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/infrastructure/db/base.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/infrastructure/db/init_db.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/infrastructure/db/models.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/infrastructure/db/session.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/presentation/auth.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wait-for-db.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/LABA1.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/LABA2.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Docs/Отчет.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Readme.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/services.py" beforeDir="false" afterPath="$PROJECT_DIR$/application/services.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/news.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/initial_news.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/infrastructure/database.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/infrastructure/models.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/infrastructure/repository.py" beforeDir="false" afterPath="$PROJECT_DIR$/infrastructure/repository.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/presentation/api.py" beforeDir="false" afterPath="$PROJECT_DIR$/presentation/api.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/presentation/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/presentation/templates/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/presentation/templates/create.html" beforeDir="false" afterPath="$PROJECT_DIR$/presentation/templates/create.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/presentation/templates/edit.html" beforeDir="false" afterPath="$PROJECT_DIR$/presentation/templates/edit.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/presentation/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/presentation/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/presentation/templates/news_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/presentation/templates/news_detail.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/security/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/.dockerignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/security/auth.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,6 +54,7 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="PUSH_AUTO_UPDATE" value="true" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
@@ -55,13 +80,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/WEB/LABA2&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "D:/WEB/LABA2/data"
   }
-}</component>
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\WEB\LABA2\data" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\WEB\LABA2\alembic" />
+    </key>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -110,7 +143,31 @@
       <option name="project" value="LOCAL" />
       <updated>1763115922430</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="LABA2NewsApp">
+      <option name="closed" value="true" />
+      <created>1763367204846</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1763367204846</updated>
+    </task>
+    <task id="LOCAL-00006" summary="LABA2NewsApp">
+      <option name="closed" value="true" />
+      <created>1763367255869</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1763367255869</updated>
+    </task>
+    <task id="LOCAL-00007" summary="LABA2NewsApp">
+      <option name="closed" value="true" />
+      <created>1763367268508</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1763367268508</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -120,6 +177,7 @@
     <MESSAGE value="ервый коммит: структура проекта и начальные файлы" />
     <MESSAGE value="LABA1NewsApp" />
     <MESSAGE value="LABA1NewsApp и отчет" />
-    <option name="LAST_COMMIT_MESSAGE" value="LABA1NewsApp и отчет" />
+    <MESSAGE value="LABA2NewsApp" />
+    <option name="LAST_COMMIT_MESSAGE" value="LABA2NewsApp" />
   </component>
 </project>

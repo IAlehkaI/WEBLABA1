@@ -34,14 +34,12 @@
     <header class="bg-white shadow-sm border-b border-gray-200">
         <div class="container mx-auto px-4 py-4 max-w-4xl flex items-center justify-between">
             {% if request.url.path == '/' %}
-                <!-- Главная — по центру -->
                 <div class="flex-1 text-center">
                     <a href="/" class="inline-block">
                         <span class="text-4xl font-logo text-accent tracking-wide">Новостник</span>
                     </a>
                 </div>
             {% else %}
-                <!-- Другие страницы — слева -->
                 <div>
                     <a href="/" class="inline-block">
                         <span class="text-3xl font-logo text-accent">Новостник</span>
@@ -49,16 +47,14 @@
                 </div>
                 <div class="flex-1"></div>
             {% endif %}
-            <div></div> <!-- Пустой блок для выравнивания -->
+            <div></div>
         </div>
     </header>
 
-    <!-- Основной контент -->
     <main class="container mx-auto px-4 py-8 max-w-4xl flex-1">
         {% block content %}{% endblock %}
     </main>
 
-    <!-- Плавающая кнопка "Добавить" только на главной -->
     {% if request.url.path == '/' %}
     <a href="/create"
        class="fixed bottom-6 right-6 bg-accent text-white p-4 rounded-full shadow-2xl hover:bg-blue-700 transition transform hover:scale-110 z-50 text-2xl font-bold">

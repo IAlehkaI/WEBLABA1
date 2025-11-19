@@ -1,11 +1,9 @@
-# application/services.py
 from typing import List, Optional
 from domain.models import News
-from infrastructure.repository import InMemoryNewsRepository
-
+from infrastructure.repository import AbstractNewsRepository
 
 class NewsService:
-    def __init__(self, repo: InMemoryNewsRepository):
+    def __init__(self, repo: AbstractNewsRepository):
         self.repo = repo
 
     def create_news(self, news: News) -> News:
@@ -24,5 +22,4 @@ class NewsService:
         return self.repo.delete(news_id)
 
     def search_news(self, query: str) -> List[News]:
-        # Вот эта строка — ключ!
         return self.repo.search(query)

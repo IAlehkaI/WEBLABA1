@@ -1,7 +1,6 @@
 {% extends "base.html" %}
 
 {% block content %}
-<!-- Круглая кнопка с иконкой карандаша -->
 <a href="/edit/{{ news.id }}"
    class="fixed top-6 right-6 z-10 bg-accent hover:bg-blue-700 text-white p-3 rounded-full shadow-lg transition"
    title="Редактировать статью">
@@ -10,9 +9,7 @@
   </svg>
 </a>
 
-<!-- Основной контент (полная ширина) -->
 <a href="/" class="text-accent hover:underline mb-4 inline-block">&larr; Назад к новостям</a>
-
 <h1 class="text-3xl font-bold text-gray-800 mb-4">{{ news.title }}</h1>
 
 {% if news.image_url %}
